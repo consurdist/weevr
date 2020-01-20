@@ -1,0 +1,17 @@
+export const GET_ERRORS = "GET_ERRORS";
+export const USER_LOADING = "USER_LOADING";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+
+export const MODEL_READY = "MODEL_READY";
+export const TF_READY = "TF_READY";
+
+export const SET_STREAM_URL = "SET_STREAM_URL";
+export const SET_BINARY_URL = "SET_BINARY_URL";
+export const SET_CLASSIFY_URL = "SET_CLASSIFY_URL";
+
+export const SET_USER_ENTRIES = "SET_USER_ENTRY";
+export const NEW_ENTRY = "NEW_ENTRY";
+
+export const SET_SPECIES_DICT = "SET_SPECIES_DICT";
+export const SET_USER_SPECIES_DICT = "SET_USER_SPECIES_DICT";
+export const SET_LAST_SEEN_DICT = "SET_LAST_SEEN_DICT";

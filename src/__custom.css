@@ -1,0 +1,302 @@
+/* Layout */
+
+
+/*Bootstrap mods:*/
+/*:root {*/
+/*  --primary: #1ABC9C;*/
+/*  --secondary: #2C3E50;*/
+/*}*/
+
+/*.btn-main {*/
+/*  background: #1ABC9C;*/
+/*  color: #FFFFFF;*/
+/*  margin: 1em;*/
+/*  border-radius: 0.5em;*/
+/*}*/
+
+/*.btn-alternate {*/
+/*  background: #2C3E50;*/
+/*  color: #FFFFFF;*/
+/*  border-radius: 0.5em;*/
+/*  margin: 1em;*/
+/*}*/
+
+
+
+#container {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+
+/* Forms */
+
+.form-user {
+  width: 33% !important;
+  margin: 0 auto !important;
+  margin-top: 10% !important;
+}
+
+.form-error {
+  color: #E50000 !important;
+}
+
+/* Flask flashes */
+
+.flash {
+  margin-right: 20px !important;
+}
+
+/* Errors */
+
+.error-box {
+  margin-top: 8%;
+}
+
+/* stuff added by us*/
+
+
+
+/*.streamContainer {*/
+/*  margin: auto;*/
+/*  display: grid;*/
+/*  grid-template-columns: auto 10% 700px auto;*/
+/*  grid-template-rows: 180px 420px 420px auto;*/
+/*}*/
+
+/*#cam_title_bp{*/
+/*  margin-left:40%;*/
+/*}*/
+
+/*#cam_title_cl{*/
+/*  margin-left:40%;*/
+/*}*/
+
+.addCamPrompt {
+  /*margin: auto;*/
+  display: inline-block;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.inline {
+  margin-left: 10px;
+  margin-top: 15px;
+  display: inline-block;
+  /*position: absolute;*/
+}
+
+
+.camListItems {
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+/*#canv {*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  !*grid-column-start: 2;*!*/
+/*  !*grid-column-end: 2;*!*/
+/*  !*grid-row:2;*!*/
+/*}*/
+/*.camVideoContainer {*/
+/*  margin: auto;*/
+/*  grid-column-start: 3;*/
+/*  grid-column-end: 4;*/
+/*  grid-row-start: 2;*/
+/*  grid-row-end: 3;*/
+/*}*/
+
+.camVideoContainerB {
+  margin: auto;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.camList {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+#camListItem {
+  margin-top: 12px;
+  padding: 10px;
+  margin: auto;
+}
+
+/*stuff added for the bootstape template */
+
+@media (max-width: 768px) {
+  .streamContainer {
+    /*margin: auto;*/
+
+    display: grid;
+    grid-template-columns: auto 70% auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px 10px;
+    /*column / row*/
+  }
+
+  .camListContainer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    /*justify-items: flex-start;*/
+    /*justify-content: center;*/
+    /*align-self: center;*/
+    align-items: center;
+    /*margin: auto;*/
+    grid-column: 2;
+    /*grid-column-start: 1;*/
+    /*grid-column-end: 3;*/
+    grid-row: 5;
+    /*grid-row-start: 3;*/
+    /*grid-row-end: 4;*/
+  }
+
+  .camListButton {
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*width: 120;*/
+  }
+
+  .camVideoContainer {
+    /*margin: auto;*/
+    margin-top: 20px;
+    grid-column: 2;
+    /*grid-row:2;*/
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .streamControl {
+    grid-column: 2;
+    grid-row: 3;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*display:inline-block;*/
+    display: flex;
+  }
+  .streamButton {
+    width: 25%;
+  }
+
+  .console {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  #AIButton {
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+  html {
+    font-size: 16px;
+  }
+
+  .streamContainer {
+    /*margin: auto;*/
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: auto 15% 70% auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 10px 10px;
+    /*column / row*/
+  }
+
+  .camListContainer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    /*justify-items: flex-start;*/
+    /*justify-content: center;*/
+    /*align-self: center;*/
+    align-items: center;
+    /*margin: auto;*/
+    /*grid-column: 2;*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /*grid-row: 1;*/
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .camListButton {
+    margin-top: 10px;
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*width: 120;*/
+  }
+
+  .camVideoContainer {
+    /*margin: auto;*/
+    margin-top: 20px;
+    grid-column: 3;
+    /*grid-row:2;*/
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .streamControl {
+    grid-column: 3;
+    grid-row:4;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*display: inline;*/
+    display: flex;
+  }
+
+  .console {
+    grid-column: 3;
+    grid-row: 5;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
