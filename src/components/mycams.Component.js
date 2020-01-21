@@ -133,10 +133,7 @@ class MyCams extends Component {
 
     }
 
-
-
     onLoadCam = (cam) => {
-
 
         if (hls !== null) {
             hls.detachMedia();
@@ -147,7 +144,6 @@ class MyCams extends Component {
         if (Hls.isSupported() && this.player) {
 
             this.setState({playing: false});
-
             this.setState({AIButtonDisabled: true});
 
             // this.player.pause();
@@ -259,15 +255,12 @@ class MyCams extends Component {
 
                         ctx.clearRect(0, 0, canvas.width, canvas.height);
                         // konsole.innerText = "...";
-
                         // setInterval(this.onTriggerClick3(), 3000);
                     } else {
                         // console.log('Predictions: ', predictions);
-
                         if (predictions[0].class === "bird") {
-
-                            console.log("canvas width: " + ww, "canvas height: " + hh);
-                            console.log("vid width: " + vidd.width, "vid height: " + vidd.height);
+                            // console.log("canvas width: " + ww, "canvas height: " + hh);
+                            // console.log("vid width: " + vidd.width, "vid height: " + vidd.height);
 
                             // var class1 = "";
                             // var class2 = "";
@@ -277,15 +270,12 @@ class MyCams extends Component {
                                 .then(classes => {
                                     this.predictions = predictions;
 
-                                    console.log(predictions);
+                                    // console.log(predictions);
                                     const class1 = classes[0].className;
                                     const class2 = classes[1].className;
                                     // const class3 = classes[2].className;
-
-                                    console.log(classes);
-
+                                    // console.log(classes);
                                     // var mobi = this.mobilenetModel.classify(videoElement, 3);
-
                                     // konsole.innerText = predictions[0].class;
 
                                     konsole.innerText = "Second guess:  " + class2;
@@ -347,17 +337,14 @@ class MyCams extends Component {
                                     ctx.textBaseline = "top";
                                     ctx.fillStyle = "#7BAF1A";
 
-
                                     // const textWidth = ctx.measureText(predictions[0].class).width;
                                     // const textWidth = ctx.measureText(mobi[0].className).width;
                                     const textWidth = ctx.measureText(class1).width;
-
 
                                     const textHeight = parseInt(font, 10); // base 10
                                     ctx.globalAlpha = 1;
                                     ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
                                     ctx.fillStyle = "white";
-
 
                                     // ctx.fillText(predictions[0].class, x, y);
                                     // ctx.fillText(mobi[0].className, x, y);
@@ -371,8 +358,9 @@ class MyCams extends Component {
                     }
                 });
         } else {
-            console.log("video stopped");
             return
+            // console.log("video stopped");
+            // return
         }
     };
 
@@ -386,36 +374,46 @@ class MyCams extends Component {
         };
         video1.onseeking = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         // video1.onseeked = () => {
         //     this.state.playing = true;
         // };
         video1.onpause = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onplaying = () => {
             this.setState({playing: true});
+            console.log('stream START');
         };
         video1.onended = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onwaiting = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onstalled = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onemptied = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onloadstart = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onerror = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         video1.onabort = () => {
             this.setState({playing: false});
+            console.log('stream STOP');
         };
         // video1.oncanplaythrough = () => {
         //     this.state.playing = true;
@@ -471,16 +469,16 @@ class MyCams extends Component {
                         <canvas id="canv"
                                 height="360"
                                 width="640"
-                                style={{
-                                    width:"70%",
-                                    height:"auto",
-                                    // marginTop: 72,
-                                    // height:"80%",
-                                    // opacity:0.5,
-                                    position: "absolute",
-                                    zIndex: 3,
-                                    outline: "#3A515F 8px solid",
-                                }}/>
+                                // style={{
+                                //     width:"70%",
+                                //     height:"auto",
+                                //     // marginTop: 72,
+                                //     // height:"80%",
+                                //     // opacity:0.5,
+                                //     position: "absolute",
+                                //     zIndex: 3,
+                                //     outline: "#3A515F 8px solid"}}
+                        />
                         <div className="playerwrapper player">
                             <div className="playerInner">
 
