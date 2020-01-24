@@ -47,7 +47,7 @@ var hls = new Hls;
 
 const camDict = {
     // "Select a cam to begin" : "http://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-    // "cam1" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "Sapsucker Woods [LIVE]" : "http://139.162.103.240:8080/hls/stream.m3u8",
     "Parkour" : "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
     "Big Buck Bunny" : "http://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
     "French Musicians" : "https://mnmedias.api.telequebec.tv/m3u8/29880.m3u8",
