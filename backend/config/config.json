@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "admin",
-    "password": "s1mpl3",
+    "username": "birdy",
+    "password": "W33verDB",
     "database": "birdidapp",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mariadb",
     "operatorsAliases": false
   },
@@ -16,10 +16,10 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "admin",
-    "password": "s1mpl3",
+    "username": "birdy",
+    "password": "W33verDB",
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mariadb",
     "operatorsAliases": false
   }
