@@ -8,7 +8,7 @@ import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING } from "./types";
 // SignUP
 export const registerUser = (userData, history) => dispatch => {
     axios
-        .post("/users/signup", userData)
+        .post("http://weevr.moonboots.design:3003/users/signup", userData)
         .then(res => history.push("/signin")) // re-direct to login on successful register
         .catch(err =>
             dispatch({
@@ -21,7 +21,7 @@ export const registerUser = (userData, history) => dispatch => {
 // SignIN - get user token
 export const loginUser = userData => dispatch => {
     axios
-        .post("/users/signin", userData)
+        .post("http://weevr.moonboots.design:3003/users/signin", userData)
         .then(res => {
             // Save to localStorage
 
@@ -84,5 +84,4 @@ export const setUserLoading = () => {
         type: USER_LOADING
     };
 };
-
 

@@ -3,7 +3,7 @@ import axios from "axios";
 import {GET_ERRORS, SET_USER_ENTRIES, SET_SPECIES_DICT, SET_USER_SPECIES_DICT, SET_LAST_SEEN_DICT} from "./types";
 
 export const getEntries = userId => dispatch => {
-    var URL = "/entries?userid=" + userId;
+    var URL = "http://weevr.moonboots.design:3003/entries?userid=" + userId;
     // console.log("this is", URL);
         axios
         .get(URL)
@@ -30,7 +30,7 @@ export const setEntries = entries => {
 };
 
 export const getSpecies = () => dispatch => {
-    var URL = "/entries/species";
+    var URL = "http://weevr.moonboots.design:3003/entries/species";
     axios
         .get(URL)
         .then(res => {

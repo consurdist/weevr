@@ -40,16 +40,18 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "nodemon backend/server.js",
     "client": "npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "npm run client",
     "build": "react-scripts build",
     "client-install": "npm install --prefix client",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "author": "Steve Fisher",
-  "proxy": "http://localhost:3003",
+  "proxy": {
+    "host": "127.0.0.1",
+    "port": "3003"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

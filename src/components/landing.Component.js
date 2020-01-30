@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Bootstrap
-// import Button from "react-bootstrap/Button";
+import Button from "react-bootstrap/Button";
 // import Container from "react-bootstrap/Container";
 
 import BackgroundBird from '../Frontpagebird.png';
@@ -23,12 +23,17 @@ class Landing extends Component {
                                     <h1 className="text-white align-right text-right border-bottom p-5 border-white"> TRACK & IDENTIFY BIRDS
                                         AT YOUR FEEDER</h1>
                                     <div className="border"></div>
-                                <p className="text-white py-2 text-center"> Fall in love with the pet you never knew you had</p>
-                                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-center"
-                                   href="/signup">SIGN
-                                    UP FOR
-                                    FREE</a>
-                                </div>
+                                    <p className="text-white py-2 text-center"> Fall in love with the pet you never knew you had</p>
+				    <Link to ="/signup">
+                                        <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-center" >
+                                            SIGN UP FOR FREE
+                                        </Button>
+                                    </Link>
+                                    {/*<a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-center"
+                                       href="/signup">SIGN
+                                        UP FOR
+                                        FREE</a>*/}
+				</div>
                             </div>
                         </div>
                     </div>

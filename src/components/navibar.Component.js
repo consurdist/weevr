@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { logoutUser } from "../actions/auth.Actions";
 
 // import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 // Bootstrap
 import Navbar from "react-bootstrap/Navbar";
@@ -34,40 +36,79 @@ class Navibar extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="Toggle navigation" className="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary rounded">MENU </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         {this.props.auth.isAuthenticated ? (
-                            <Nav className="ml-auto">
-                                <Nav.Link href="/mycams">
-                                <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
-                                >MY CAMS
-                                </Button>
+			    <Nav className="ml-auto">
+
+                                <Nav.Link as={Link} to="/mycams">
+                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
+                                    >MY CAMS
+                                    </Button>
                                 </Nav.Link>
-                                <Nav.Link href="/entries">
-                                <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
-                                >MY ENTRIES
-                                </Button>
+                                {/*<Nav.Link href="/mycams">*/}
+                                {/*<Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"*/}
+                                {/*>MY CAMS*/}
+                                {/*</Button>*/}
+                                {/*</Nav.Link>*/}
+
+
+                                <Nav.Link as={Link} to="/entries">
+                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
+                                    >MY ENTRIES
+                                    </Button>
                                 </Nav.Link>
-                                <Nav.Link href="/myspecies">
-                                <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
-                                >MY SPECIES
-                                </Button>
+                                {/*<Nav.Link href="/entries">*/}
+                                {/*<Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"*/}
+                                {/*>MY ENTRIES*/}
+                                {/*</Button>*/}
+                                {/*</Nav.Link>*/}
+
+
+                                <Nav.Link as={Link} to="/myspecies">
+                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
+                                    >MY SPECIES
+                                    </Button>
                                 </Nav.Link>
+                                {/*<Nav.Link href="/myspecies">*/}
+                                {/*<Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"*/}
+                                {/*>MY SPECIES*/}
+                                {/*</Button>*/}
+                                {/*</Nav.Link>*/}
+
+
+                                {/*<Nav.Link as={Link} to="/myspecies">*/}
+                                {/*    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"*/}
+                                {/*    >SIGN OUT*/}
+                                {/*    </Button>*/}
+                                {/*</Nav.Link>*/}
                                 <Nav.Link href="#" onClick={this.onLogoutClick}>
                                 <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-secondary text-white"
                                 >SIGN OUT
                                 </Button>
                                 </Nav.Link>
                             </Nav>
-                        ) : (
+                        	) : (
                             <Nav className="ml-auto">
-                                <Nav.Link href="/signup">
-                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white">
-                                        SIGN UP
+
+                                <Nav.Link as={Link} to="/signup">
+                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white"
+                                    >SIGN UP
                                     </Button>
                                 </Nav.Link>
-                                <Nav.Link href="/signin">
-                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-secondary text-white">
-                                        SIGN IN
+                                {/*<Nav.Link href="/signup">*/}
+                                {/*    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-primary text-white">*/}
+                                {/*        SIGN UP*/}
+                                {/*    </Button>*/}
+                                {/*</Nav.Link>*/}
+
+                                <Nav.Link as={Link} to="/signin">
+                                    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-secondary text-white"
+                                    >SIGN IN
                                     </Button>
                                 </Nav.Link>
+                                {/*<Nav.Link href="/signin">*/}
+                                {/*    <Button className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger btn-secondary text-white">*/}
+                                {/*        SIGN IN*/}
+                                {/*    </Button>*/}
+                                {/*</Nav.Link>*/}
                             </Nav>
                         )}
                     </Navbar.Collapse>

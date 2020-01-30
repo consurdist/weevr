@@ -3,7 +3,7 @@
     "username": "birdy",
     "password": "W33verDB",
     "database": "birdidapp",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mariadb",
     "operatorsAliases": false
   },
@@ -19,7 +19,7 @@
     "username": "birdy",
     "password": "W33verDB",
     "database": "database_production",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mariadb",
     "operatorsAliases": false
   }
