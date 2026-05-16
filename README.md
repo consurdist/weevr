@@ -1,56 +1,63 @@
 # Weevr
 
-## Installation (**dev branch**):
-***
-***
-#### Git:
+A React web application for bird species identification, built around 
+a custom-trained TensorFlow Lite model. Users connect to live bird 
+feeder webcam streams, submit frames for identification, and browse 
+species information. Designed as a companion app for a smart bird 
+feeder product concept.
 
-For *local development*, clone the repo and switch to the ***dev*** branch:
-> `git clone https://github.com/fischsauce/weevr.git && cd weevr`
->
-> `git checkout dev && git pull`
+## Stack
 
-Verify the current working branch:
-> `git branch`
+React · Node.js · Express · MariaDB · TensorFlow Lite
 
-***
-#### Database:
+## Features
 
-Install mariadb:
-> `sudo apt install mariadb && sudo mariadb`
+- Live bird feeder stream integration
+- Custom TensorFlow Lite model for species identification
+- User authentication
+- Species information browser
+- MariaDB backend with full schema included
 
-Add a new database and user:
-> `create database birdidapp;`
->
-> `grant all privileges on birdidapp.* TO 'birdy'@'%' identified by 'W33verDB';`
->
-> `flush privileges;`
->
-> `quit`
+## Screenshots
 
-Migrate the backup db:
+*Coming soon*
 
-> `sudo mysqldump -u root -p birdidapp < birdidapp.sql`
+## Installation
 
-If you have issues with root user/password, try following these steps: https://mariadb.com/kb/en/mysql_secure_installation/
-***
+**Clone the repo:**
+```bash
+git clone https://github.com/consurdist/weevr.git && cd weevr
+```
 
-#### React:
+**Install MariaDB and set up the database:**
+```bash
+sudo apt install mariadb && sudo mariadb
+```
+```sql
+create database birdidapp;
+grant all privileges on birdidapp.* TO 'birdy'@'%' identified by 'W33verDB';
+flush privileges;
+quit
+```
 
-Install the dependencies (frontend):
-> `npm install`
+**Restore the database:**
+```bash
+sudo mysqldump -u root -p birdidapp < birdidapp.sql
+```
 
-Install dependencies (backend):
-> `cd backend && npm install && cd ..`
+**Install dependencies and run:**
+```bash
+npm install
+cd backend && npm install && cd ..
+npm run dev
+```
 
-Run local server (from root directory):
-> `npm run dev`
+Server runs at `http://localhost:3000`
 
-***the server should now be accessible at `http://localhost:3000`***
+## Status
 
-#### You can use the following credentials to login:
- 
-* email: `123@fish.com`
-* password: `abcd1234`
-***
-***
+Functional as of January 2020. Was self-hosted in production on a 
+Linux server with the React build served statically and Node backend 
+running separately. Backend bird feeder stream sources are no longer 
+active — local testing requires substituting an alternative stream 
+source. Not actively maintained.
